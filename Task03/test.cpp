@@ -83,28 +83,28 @@ void test10() {
 
 // max long long type number (максимальное значение типа long long)
 void test11() {
-	long long number = 9'223'372'036'854'775'807LL;
+	long long number = LLONG_MAX;
 	bool expected = true;
 	print_test(number, expected, "test11");
 }
 
 // min long long type number (минимальное значение типа long long)
 void test12() {
-	long long number = -1 * 9'223'372'036'854'775'808LL;
+	long long number = LLONG_MIN;
 	bool expected = true;
 	print_test(number, expected, "test12");
 }
 
 // too large long long type number (достаточно большое значение типа long long)
 void test13() {
-	long long number = 922'337'203'685'477'580LL;
+	long long number = LLONG_MAX / 10;
 	bool expected = false;
 	print_test(number, expected, "test13");
 }
 
 // too small long long type number (достаточно маленькое значение типа long long)
 void test14() {
-	long long number = -922'337'203'685'477'580LL;
+	long long number = LLONG_MIN / 10;
 	bool expected = false;
 	print_test(number, expected, "test14");
 }

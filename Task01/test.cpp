@@ -75,14 +75,14 @@ void test09() {
 
 // max long long type number (максимальное значение типа long long)
 void test10() {
-	long long number = 9'223'372'036'854'775'807LL;
+	long long number = LLONG_MAX;
 	int expected = 9;
 	print_test(number, expected, "test10");
 }
 
 // min long long type number (минимальное значение типа long long)
 void test11() {
-	long long number = -1 * 9'223'372'036'854'775'808LL;
+	long long number = LLONG_MIN;
 	int expected = 10;
 	print_test(number, expected, "test11");
 }
